@@ -1,4 +1,9 @@
-/* step 1 : Create table about our customers and their cars */
+/* step 1 : creer une table clients: 
+- varchar format pour les strings
+- INT format pour les entiers numeriques
+Ce qui se trouve entre parentheses sont les limites en termes de characters.
+Par exemple si ville VARCHAR(5): la valeur "PARIS" marchera mais pas "MARSEILLE"
+pour les  */
 DROP TABLE IF EXISTS sql_2026.clients;
 CREATE TABLE sql_2026.clients
 ( 
@@ -9,9 +14,7 @@ ville VARCHAR(30),
 marque VARCHAR(20)
 );
 
-
 /*step 2 : add data to the table*/
-
 INSERT INTO sql_2026.clients (nom, prenom, age, ville, country)
 VALUES ("Musk","Elon",50,"miami","usa"),
 ("Mbappe","Kylian",23,"Paris","france"),
