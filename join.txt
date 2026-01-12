@@ -1,0 +1,52 @@
+# JOINS (JOINTURES)
+- joint des tables entre elles sur des criteres (COLONNES): on choisit les colonnes cles (KEYS)
+
+
+
+EXEMPLE:
+2 tables sur les etudiants:
+- table cours_de_musique
+- table cours_de_danse
+
+cours_de_musique (CERCLE A):
+
+ID (PK)     | NOM    | PRENOM    | NOTE  | ADRESSE  |    VILLE |     CLASSE  | INTERET_POUR_GEOGRAPHIE
+01x      Dupont     Jean        17      adresse1      Paris       classe1       OUI 
+03x      Diallo    lilian      18     adresse3                  classe1         OUI 
+07x      Lin       tony       15      adress7       Sarcelles  classe2          NON 
+
+cours_de_danse (CERCLE B):
+ID  (PK)    | NOM    | PRENOM    | NOTE  | ADRESSE  |    VILLE |     CLASSE | PERMIS_B
+01x      Dupont     Jean        13      adresse1  Paris       classe1           OUI
+02x      kumar     Pierre        13      adresse5  Lille       classe1          NON
+07x     Lin       tony       15      adress7       Sarcelles  classe2           OUI 
+
+PRIMARY KEY:
+- c'est une colonne qui ne contient aucune valeur nulle 
+-chaque valeur est unique  
+
+# INNER JOIN
+Quelle sont les eleves qui vont aux deux cours?
+joindre 2 tables entre elles sur des criteres communs.
+NOUVELLE TABLE : 
+
+ID (PK)     | NOM    | PRENOM    | NOTE  | ADRESSE  |    VILLE |     CLASSE
+01x      Dupont     Jean        17      adresse1      Paris       classe1
+07x      Lin       tony       15      adress7       Sarcelles  classe2
+
+
+
+# LEFT JOIN 
+Quels sont les eleves qui vont uniquement au cours de musique et qui ont le permis de conduire?
+
+ID (PK)     | NOM    | PRENOM    | NOTE  | ADRESSE  |    VILLE |     CLASSE  | INTERET_POUR_GEOGRAPHIE | PERMIS B
+01x      Dupont     Jean        17      adresse1      Paris       classe1       OUI                         OUI 
+03x      Diallo    lilian      18     adresse3                  classe1         OUI                         null  
+07x      Lin       tony       15      adress7       Sarcelles  classe2          NON                         OUI 
+
+
+# LEFT ANTI JOIN 
+CERCLE A CERCLE B: je veux uniquement les eleves qui se trouvent dans le cercle A et qui ne sont pas dans le cercle B 
+J'ai envie de proposer un cours supplementaire (cours de geographie) aux eleves, qui ne peuvent avoir que maximum 2 options.
+Prendre uniquement les eleves qui vont au cours de musique et qui ne vont pas au cours de danse. 
+
