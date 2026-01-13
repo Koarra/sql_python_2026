@@ -1,0 +1,5 @@
+id_client, product_information, quantity, amount, location, postal_code, age 
+ax01,Macbook_M1, 150, 15000, Paris, 75000, 45
+ax02,samsung_watch_x1, 1, 1000, Paris, 75000, 25
+ax03,Google_phone, 2, 2000, Paris, 75000, 35
+ax03,Sony_m90, 2, 600, Paris, 75000, 35
